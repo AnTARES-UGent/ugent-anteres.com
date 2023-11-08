@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif; /* or 'Roboto', sans-serif; */
+}
+
+button {
+    padding: 0.5em;
+    border-radius: 9999px;
+    border: 2px solid;
+    border-color: var(--color-on-background);
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    transition: background-color 0.3s ease;
+    box-shadow: none;
+    outline: none;
+}
+
+button:hover {
+    border-color: var(--color-background);
+    background-color: var(--color-on-background);
+    color: var(--color-background);
+}
+
+/* Style for all <section> elements */
+section {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+
+section.border-bottom {
+    border-bottom: 2px solid;
+    border-color: var(--color-primary-variant);
+}
+
+/* Style for headings within <section> */
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+    color: var(--color-primary);
+    margin-bottom: 10px;
+}
+
+/* Style for paragraphs within <section> */
+section p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+}

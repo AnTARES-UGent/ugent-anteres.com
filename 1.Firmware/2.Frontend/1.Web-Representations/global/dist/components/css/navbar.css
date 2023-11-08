@@ -1,0 +1,98 @@
+/* Override Bootstrap Navbar default styling */
+.navbar {
+    z-index: 1000;
+    background-color: var(--color-nav-background) !important;
+    color: var(--color-nav-on-background) !important;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+}
+
+.theme-light-nav .navbar{
+    border-bottom: 1px solid;
+    border-color: var(--color-primary-variant);
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: var(--color-nav-on-background) !important;
+}
+
+.navbar-toggler {
+    border: 0px;
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+  
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Change the navbar-toggler-icon color based on the theme */
+.theme-dark-nav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Change the navbar-toggler-icon color based on the theme */
+.theme-transparent-nav .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Navbar links hover and active styles */
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item .nav-link:hover {
+    background-color: var(--color-nav-background) !important;
+    color: var(--color-nav-on-background) !important; /* Highlight color */
+}
+
+/* Add a subtle bottom border to navbar-nav items on hover */
+.navbar-nav .nav-item .nav-link {
+    position: relative; /* Needed to properly position the pseudo-element */
+    overflow: hidden; /* Ensures the pseudo-element is clipped to the nav-link's dimensions */
+}
+
+/* Set up the pseudo-element for the underline effect */
+.navbar-nav .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0; /* Position at the bottom of the nav-link */
+    left: 0; /* Start from the left side */
+    width: 0; /* Initial width is zero */
+    height: 2px; /* Height of the underline */
+    background-color: var(--color-nav-on-background); /* Color of the underline */
+    transition: width 0.3s ease, left 0.3s ease; /* Animate the width and left properties */
+}
+
+/* When hovering, expand the pseudo-element to the full width of the nav-link */
+.navbar-nav .nav-item .nav-link:hover::after,
+.navbar-nav .nav-item .nav-link:focus::after {
+    width: 100%; /* Full width on hover */
+    left: 0; /* Remain on the left side */
+    transition: width 0.3s ease; /* Only animate the width property on hover */
+}
+
+/* When the mouse is not hovering, make the underline disappear from the right side */
+.navbar-nav .nav-item .nav-link::after {
+    left: auto; /* Reset left to auto so that right can take over */
+    right: 0; /* Position from the right side */
+    transition: width 0.3s ease, right 0.3s ease; /* Animate the right property after width */
+}
+
+/* Dropdown menu styling */
+.navbar .dropdown-menu {
+    background-color: var(--color-background) !important;
+    border: none;
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--color-nav-on-background) !important;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    color: var(--color-nav-on-background) !important;
+    background-color: var(--color-nav-background) !important;
+}

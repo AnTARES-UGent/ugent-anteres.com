@@ -1,0 +1,51 @@
+/* theme.css */
+:root, .theme-light {
+    /* Light theme colors based on image panel 1 */
+    --color-primary: #000000;          /* Primary (same as On Background) */
+    --color-primary-variant: #333333;
+    --color-secondary: #03DAC6;        /* Secondary */
+    --color-secondary-variant: #018786;/* Secondary Variant */
+    --color-background: #FFFFFF;       /* Background */
+    --color-surface: #f5f5f7;          /* Surface */
+    --color-error: #B00020;            /* Error */
+    --color-on-primary: #FFFFFF;       /* On Primary */
+    --color-on-secondary: #000000;     /* On Secondary */
+    --color-on-background: #000000;    /* On Background */
+    --color-on-surface: #000000;       /* On Surface */
+    --color-on-error: #FFFFFF;         /* On Error */
+    --color-nav-background: #FFFFFF;
+    --color-nav-on-background: #000000;
+}
+  
+.theme-dark {
+    /* Dark theme colors based on image panel 2 */
+    --color-primary: #FFFFFF;
+    --color-primary-variant: #CCCCCC;  
+    --color-secondary: #03DAC6;        /* Secondary */
+    --color-secondary-variant: #03DAC6;/* Secondary Variant (same as Secondary) */
+    --color-background: #000000;       /* Background */
+    --color-surface: #121212;          /* Surface */
+    --color-error: #CF6679;            /* Error */
+    --color-on-primary: #000000;       /* On Primary */
+    --color-on-secondary: #000000;     /* On Secondary */
+    --color-on-background: #FFFFFF;    /* On Background */
+    --color-on-surface: #FFFFFF;       /* On Surface */
+    --color-on-error: #000000;         /* On Error */
+    --color-nav-background: #000000;
+    --color-nav-on-background: #FFFFFF;
+}
+
+.theme-light-nav {
+    --color-nav-background: #FFFFFF;
+    --color-nav-on-background: #000000;
+}
+
+.theme-dark-nav {
+    --color-nav-background: #000000;
+    --color-nav-on-background: #FFFFFF;
+}
+
+.theme-transparent-nav {
+    --color-nav-background: transparent;
+    --color-nav-on-background: #FFFFFF;
+}

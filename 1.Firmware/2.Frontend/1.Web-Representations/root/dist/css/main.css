@@ -1,0 +1,45 @@
+#landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    filter: blur(0.5px);
+}
+
+#landing::after {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+#landing-content {
+    z-index: 1;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #fff;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.current-char {
+    background-color: rgba(255, 255, 255, 0.0);
+    border-radius: 2px; /* Gives a slight rounded effect to the hue */
+}
