@@ -9,7 +9,6 @@
     color: #fff;
     position: relative;
     overflow: hidden;
-    filter: blur(0.5px);
 }
 
 #landing::after {
@@ -39,7 +38,27 @@
     }
 }
 
-.current-char {
-    background-color: rgba(255, 255, 255, 0.0);
-    border-radius: 2px; /* Gives a slight rounded effect to the hue */
+/* Add fade-in keyframes for the background image */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+  
+/* Class to control the fade-in effect and removal of blur */
+#landing.landing-image-active {
+    background-image: var(--landing-image);
+    background-size: cover;
+    background-position: center;
+    animation: fadeIn 1s ease forwards;
+    filter: none;
+}
+
+/* Adjust the blur style to apply only to the text, not the entire landing */
+#landing #landing-content {
+    filter: blur(0.5px);
 }

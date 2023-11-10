@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     type({text: brandName, container: document.getElementById('animated-brand-name'), speed: 100, clear: true, next: function() {
         type({text: brandVision, container: document.getElementById('animated-brand-vision'), speed: 25, mistakeRate: 0.04, next: function() {
+            document.getElementById('landing').classList.add('landing-image-active');
             if (!seenLanding) {document.getElementById('about').scrollIntoView({behavior: 'smooth'}); seenLanding = true;}
         }});
     }});
