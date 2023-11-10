@@ -15,7 +15,7 @@ def default_file_handler(filename, prefix, container):
         if parts[0] not in cfg.RAW_DIRECTORIES:
             referer_container = referrer_prefix.replace('/', '->')
             print('Serving static file from container', referer_container)
-            return util.serve_file_from_container(referer_container, f'dist/{str("/").join(parts[1:])}')
+            return util.serve_file_from_container(referer_container, f'dist/{str("/").join(parts[len(prefix.split("/")):])}')
         else:
             print('Serving static file raw directory', filename)
             return util.serve_file_from_raw_directory(filename)
