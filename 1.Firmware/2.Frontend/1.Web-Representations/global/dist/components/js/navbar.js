@@ -1,3 +1,5 @@
+import { BaseComponent, Registry } from './components'
+
 // NavbarComponent.js
 class NavbarComponent extends BaseComponent {
   initialize() {
@@ -22,7 +24,7 @@ class NavbarComponent extends BaseComponent {
     // Render the navbar suitable for small screens without placeholder
     this.element.innerHTML = /*html*/`
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="/">Logo</a>
         <button class="navbar-toggler" type="button" 
                 data-bs-toggle="collapse" 
                 data-bs-target="#navbarNav" 
@@ -33,9 +35,10 @@ class NavbarComponent extends BaseComponent {
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
-            <li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#team">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#sponsors">Sponsors</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#join">Join</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
           </ul>
         </div>
@@ -47,12 +50,13 @@ class NavbarComponent extends BaseComponent {
     // Render the navbar suitable for normal screens
     this.element.innerHTML = /*html*/`
       <div class="container-fluid d-flex justify-content-between">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="/">Logo</a>
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
-            <li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#team">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#sponsors">Sponsors</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#join">Join</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
           </ul>
         </div>
@@ -66,12 +70,13 @@ class NavbarComponent extends BaseComponent {
     // Render the navbar suitable for huge screens with more space between nav items
     this.element.innerHTML = /*html*/`
       <div class="container-fluid d-flex justify-content-between">
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="/">Logo</a>
         <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#sponsors">Sponsors</a></li>
-            <li class="nav-item"><a class="nav-link" href="#join">Join</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#team">Team</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#sponsors">Sponsors</a></li>
+            <li class="nav-item"><a class="nav-link" href="/#join">Join</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
           </ul>
         </div>
@@ -104,4 +109,4 @@ class NavbarComponent extends BaseComponent {
 }
 
 // Assuming NavbarComponent.js is imported before this script
-registry.registerComponent('antares-navbar', NavbarComponent);
+Registry.registerComponent('antares-navbar', NavbarComponent);

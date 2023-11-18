@@ -1,5 +1,5 @@
 // BaseComponent.js
-class BaseComponent {
+export class BaseComponent {
   constructor(element) {
     if (new.target === BaseComponent) {
       throw new TypeError("Cannot construct BaseComponent instances directly");
@@ -59,4 +59,4 @@ class ComponentRegistry {
   }
 }
 
-const registry = new ComponentRegistry();
+export const Registry = new ComponentRegistry();

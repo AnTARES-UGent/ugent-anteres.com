@@ -1,0 +1,213 @@
+/*.gradient-overlay-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, var(--color-background));
+}*/
+
+.section-border-bottom {
+    border-bottom: 1px solid;
+    border-color: var(--color-surface);
+}
+
+.top-gradient {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to bottom, var(--color-background), transparent);
+}
+
+.bottom-gradient {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: linear-gradient(to top, var(--color-background), transparent);
+}
+
+.scrollable {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+
+    /* For Firefox */
+    scrollbar-width: thin; /* 'auto', 'thin', or 'none' */
+    scrollbar-color: var(--color-surface) transparent;
+
+    /* For WebKit (Chrome, Edge, Safari) */
+}
+
+/* WebKit Scrollbar Styles */
+.scrollable::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background: transparent;
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: var(--color-surface);
+}
+
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#landing {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+}
+
+#landing-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #fff;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Add fade-in keyframes for the background image */
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
+  
+/* Class to control the fade-in effect and removal of blur */
+#landing-content.fade-out {
+    opacity: 1;
+    animation: fadeOut 2s ease forwards;
+}
+
+#landing-content.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+/* Adjust the blur style to apply only to the text, not the entire landing */
+#landing #landing-content {
+    filter: blur(0.5px);
+}
+
+#about-container {
+    min-height: fit-content;
+}
+
+.slide-button {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.3s;
+    color: var(--color-on-background);
+}
+
+.slide-button:hover {
+    color: var(--color-on-background);
+    background-color: var(--color-surface); /* Make sure this variable is defined in your CSS */
+}
+
+.slide-button > svg {
+    color: var(--color-on-background);
+}
+
+.slide-image {
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.content-wrapper {
+    width: 80%;
+    height: 80%;
+    max-height: 80%;
+    max-width: 80%;
+    overflow: auto;
+}
+
+#about-description {
+    border-radius: 12px;
+    overflow: scroll;
+}
+
+#about-container > .row > .col-md-6 {
+    height: 100%;
+}
+
+.member-card {
+    text-decoration: none;
+    color: inherit;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+.member-card:hover {
+    border-radius: 12px;
+    background-color: var(--color-surface);
+}
+
+.sponsor-card {
+    height: fit-content;
+    text-decoration: none;
+    color: inherit;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.sponsor-card:hover {
+    border-radius: 12px;
+    background-color: var(--color-surface);
+}
+
+.sponsor-card img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+    #about-container > .row {
+        flex-direction: column;
+    }
+    #about-container > .row > .col-md-6 {
+        height: 50%;
+    }
+}
