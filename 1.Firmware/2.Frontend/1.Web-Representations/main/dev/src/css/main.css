@@ -1,0 +1,30 @@
+body {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+}
+
+.section-content {
+    width: 80%;
+    height: 80%;
+}
+
+button {
+    padding: 0.25em 0.5em; /* Smaller padding */
+    border-radius: 0; /* Fully rounded edges */
+    border: 1px solid; /* Thinner border for a lighter style */
+    border-color: var(--color-on-background); /* Border color from your variables */
+    background-color: var(--color-background); /* Background color from your variables */
+    color: var(--color-on-background); /* Text color from your variables */
+    transition: all 0.3s ease; /* Transition for all properties */
+    box-shadow: none;
+    outline: none;
+    font-size: 0.875rem; /* Smaller font size */
+    cursor: pointer; /* Change cursor to pointer to indicate button functionality */
+}
+
+button:hover {
+    border-color: var(--color-primary); /* Hover border color - can adjust to any variable */
+    background-color: var(--color-on-background); /* Hover background color */
+    color: var(--color-background); /* Hover text color */
+    text-decoration: none; /* Ensuring no underline on hover */
+}

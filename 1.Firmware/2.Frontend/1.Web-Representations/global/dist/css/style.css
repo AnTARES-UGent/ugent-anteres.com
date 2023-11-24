@@ -7,12 +7,19 @@ body, html {
 }
 
 * {
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
     position: relative;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Work Sans', sans-serif; /* or 'Roboto', sans-serif; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 button {
