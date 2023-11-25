@@ -7,6 +7,7 @@ SERVE_DIRECTORY = os.path.join(_ABSOLUTE_PATH, "..", "..", "..", "2.Frontend", "
 PUBLIC_DIRECTORIES = {
     "global": None,
     "root": None,
+    "main": None
 }
 
 RAW_DIRECTORIES = [
@@ -14,5 +15,5 @@ RAW_DIRECTORIES = [
 ]
 
 ALIASES = {
-    "": "root"
+    "": "main"
 }

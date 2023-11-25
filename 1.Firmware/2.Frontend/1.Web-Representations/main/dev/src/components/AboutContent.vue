@@ -1,12 +1,12 @@
 <template>
   <el-row class="about-content-row" align="middle" justify="center">
-    <el-col :span="12" class="about-description-col">
+    <el-col :span="24" class="about-description-col">
       <div class="about-description">
         <p class="title">{{ title }}</p>
         <p class="description">{{ description }}</p>
       </div>
     </el-col>
-    <el-col :span="12" class="about-image-col">
+    <el-col :span="24" class="about-image-col">
       <el-image
         class="about-image"
         :src="imageSrc"
@@ -44,7 +44,7 @@ export default {
 }
 
 .about-image-col, .about-description-col {
-  height: 100%;
+  height: fit-content;
   display: flex;
   align-items: center;
 }
@@ -52,13 +52,13 @@ export default {
 .about-image {
   border-radius: 8px;
   width: 100%;
-  height: 100%;
+  height: 50rem;
   object-fit: cover;
 }
 
 .about-description {
   height: 100%;
-  padding:0rem 2rem 0rem 0rem;
+  padding:0rem 0rem 2rem 0rem;
 }
 
 .title {
@@ -71,14 +71,15 @@ export default {
 }
 
 @media only screen and (max-width: 1200px) {
-  .about-content-row {
-    flex-direction: column;
-  }
+  /*.about-content-row {*/
+  /*  flex-direction: column;*/
+  /*}*/
   .about-image {
     /* Ensuring the aspect ratio is maintained without black borders */
     min-height: 0; /* Override ElementUI's default */
     width: auto;
     min-width: 100%;
+    max-height: 30rem;
   }
   .about-image-col, .about-description-col {
     width: 100%;

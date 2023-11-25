@@ -100,10 +100,18 @@ section {
 }
 
 @media only screen and (max-width: 1200px) {
+  .section-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem 1rem 0rem 1rem;
+    }
+
   section {
     height: auto;
     min-height: 100vh;
-    padding: 2rem 3rem;
+    padding: 2rem 1rem;
   }
   .section-content {
     flex-direction: column;

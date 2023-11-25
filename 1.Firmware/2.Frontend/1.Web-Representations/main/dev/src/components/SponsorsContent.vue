@@ -112,6 +112,7 @@ export default {
 
 .sponsors-description {
   width: 100%;
+  padding: 2rem 0rem 0rem 0rem;
 }
 
 .sponsors-list {
